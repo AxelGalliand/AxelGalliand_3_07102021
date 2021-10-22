@@ -1,0 +1,11 @@
+{
+  "name": "projet_3",
+  "version": "1.0.0",
+  "description": "projet numéro 3 de la formation OC",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:css/styles.css"
+  },
+  "author": "GALLIAND Axel",
+  "license": "ISC"
+}
