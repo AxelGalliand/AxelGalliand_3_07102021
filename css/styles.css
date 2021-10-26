@@ -124,6 +124,12 @@ section {
   position: absolute;
   left: -0.75rem;
 }
+.functioning__bloc--step:hover {
+  background-color: #efe6fa;
+}
+.functioning__bloc--step:hover i {
+  color: #9356DC;
+}
 
 .restaurant {
   background-color: whitesmoke;
@@ -170,9 +176,43 @@ section {
   height: 2rem;
   width: 2rem;
   background-color: transparent;
+  border: 0px solid;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: black;
+}
+.restaurant__bloc .card__foot--like:hover::after {
+  opacity: 1;
+}
+.restaurant__bloc .card__foot--like::after {
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background: linear-gradient(to top right, #FF79DA, #9356DC);
+}
+.restaurant__bloc .card__foot--like--btn {
+  transition-duration: 0.25s;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
 }
 
 /*# sourceMappingURL=styles.css.map */
