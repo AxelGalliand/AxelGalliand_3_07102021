@@ -1,0 +1,52 @@
+@keyframes bars {
+  0% {
+    transform: scaleY(1.0);
+    opacity: 1;
+  }
+
+  100%{
+    transform: scaleY(0.1);
+    opacity: 0; 
+  }
+}
+
+@keyframes like__noBG {
+  0% {
+    opacity: 1;
+  }
+
+100% {
+  opacity: 0;
+}
+}
+
+@keyframes like__BG {
+  0% {
+    opacity: 0;
+}
+25%{
+  opacity: 0.25;
+    background-image: linear-gradient(to top right, $color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+50% {
+  opacity: 0.5;
+    background-image: linear-gradient(to top right, $color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+75%{
+  opacity: 0.75;
+    background-image: linear-gradient(to top right, $color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+100% {
+    opacity: 1;
+    background-image: linear-gradient(to top right, $color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+}

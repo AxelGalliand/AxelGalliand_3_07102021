@@ -1,3 +1,50 @@
+
+.loading {
+  pointer-events: none;
+position: fixed;
+height: 100%;
+width: 100%;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 30;
+
+
+  .load {
+   width: 15rem;
+   height:17rem;
+   display: flex;
+   justify-content: space-around;
+   &__bar {
+        border-radius: 70%;
+        height: 100%;
+        width: 1.8rem;
+        animation: bars 1000ms forwards alternate;
+        animation-iteration-count: 3;
+        @for $i from 1 through 3 {
+         &--#{$i} {
+           animation-delay: $anim-delay * $i;
+          }        
+         }
+
+         &--1 {
+          background-color: $color-primary;
+         }
+         &--2 {
+          background-color: $color-secondary;
+         }
+         &--3 {
+          background-color: $color-tertiary;
+         }
+     }
+  }
+}
+
+
 .location {
   background-color: rgba(122, 121, 121, 0.158);
   display: flex;
@@ -38,6 +85,7 @@
 
 .functioning {
   padding: $padding-default;
+  background-color: white;
 
   &__bloc {
   padding: 1rem 0 1rem 1rem;
@@ -83,7 +131,7 @@
  background-color: rgb(245, 245, 245);
  padding: $padding-default;
 
-&__bloc {
+ &__bloc {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   column-gap: 2rem;
@@ -103,17 +151,17 @@
      border-radius: 1rem 1rem 0 0;
      object-fit: cover;
 
-   }
+    }
 
-   &__tag {
-    padding: 0.4rem 0.8rem;
-    background-color: $color-tertiary;
-    color: darken($color-tertiary, 40%);
-    border-radius: 0.2rem;
-    position: absolute;
-    top: 1rem;
-    right: 0.75rem;
-   }
+    &__tag {
+     padding: 0.4rem 0.8rem;
+     background-color: $color-tertiary;
+     color: darken($color-tertiary, 40%);
+     border-radius: 0.2rem;
+     position: absolute;
+     top: 1rem;
+     right: 0.75rem;
+    }
 
     &__foot {
       display: flex;
@@ -129,61 +177,37 @@
      }
 
      &--like {
-      height: 2rem;
-      width: 2rem;
-      background-color: transparent;
-      border: 0px solid;
-      padding: 0;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      cursor: pointer;
-      position: relative;
-      background-color: black;
+       display: flex;
+       justify-content: center;
+       position: absolute;
+       right: 20px;
+       top: 1;
 
-      
-      &:hover{
-       &::after {
-        opacity: 1;
+       .noBG {
+         left: -0.4px;
+         position: relative;
+         &:hover {
+           animation: like__noBG 0.5s forwards;
+         }
        }
-    }
-      
-      &::after{
-        transition: 0.5s;
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        background:linear-gradient(to top right, $color-secondary, $color-primary);
-        
+        .BG {
+          position: absolute;
+          top: 0px;
+          opacity: 0;
+          color: #FFF;
+          &:hover {
+            animation: like__BG 0.5s forwards;
+          }
+        }
       }
-  
-    &--btn {
-      transition-duration: .25s;
-      background-color: white;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      mix-blend-mode: lighten;
-      
+    
     }
-  }
       
 
-      }
-     }
-     
    }
-
   }
+     
+ }
+
+
  
