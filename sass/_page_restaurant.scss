@@ -1,0 +1,66 @@
+.header__backarrow {
+position: relative;
+
+ &--link--icon {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: rgb(59, 59, 59);
+   position: absolute;
+   left: 1.5rem;
+   top: 1.3rem;
+   font-size: 1.4rem;
+ }
+}
+
+.imgtop {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.menu {
+border-radius: 2rem 2rem 0 0;
+background-color: rgb(245,245,245);
+position: relative;
+margin-top: -4rem;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    
+    padding: 0.25rem 1rem 0 1rem;
+
+
+     &--title {
+      font-family: Shrikhand;
+     }
+
+     &--like {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      right: 40px;
+      top: 1;
+
+      .noBG {
+        left: -0.4px;
+        position: relative;
+        &:hover {
+          animation: like__noBG 0.5s forwards;
+        }
+      }
+       .BG {
+         position: absolute;
+         top: 0px;
+         opacity: 0;
+         color: #FFF;
+         &:hover {
+           animation: like__BG 0.5s forwards;
+         }
+       }
+     }
+  }
+
+}
+

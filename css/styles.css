@@ -9,6 +9,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul, ol {
@@ -288,6 +289,64 @@ section {
   color: #FFF;
 }
 .restaurant__bloc .card__foot--like .BG:hover {
+  animation: like__BG 0.5s forwards;
+}
+
+.header__backarrow {
+  position: relative;
+}
+.header__backarrow--link--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b3b3b;
+  position: absolute;
+  left: 1.5rem;
+  top: 1.3rem;
+  font-size: 1.4rem;
+}
+
+.imgtop {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  border-radius: 2rem 2rem 0 0;
+  background-color: whitesmoke;
+  position: relative;
+  margin-top: -4rem;
+}
+.menu__head {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 1rem 0 1rem;
+}
+.menu__head--title {
+  font-family: Shrikhand;
+}
+.menu__head--like {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 40px;
+  top: 1;
+}
+.menu__head--like .noBG {
+  left: -0.4px;
+  position: relative;
+}
+.menu__head--like .noBG:hover {
+  animation: like__noBG 0.5s forwards;
+}
+.menu__head--like .BG {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  color: #FFF;
+}
+.menu__head--like .BG:hover {
   animation: like__BG 0.5s forwards;
 }
 
