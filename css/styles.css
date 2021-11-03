@@ -43,29 +43,19 @@ section {
   0% {
     opacity: 0;
   }
-  25% {
-    opacity: 0.25;
-    background-image: linear-gradient(to top right, #9356DC, #FF79DA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  50% {
-    opacity: 0.5;
-    background-image: linear-gradient(to top right, #9356DC, #FF79DA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  75% {
-    opacity: 0.75;
-    background-image: linear-gradient(to top right, #9356DC, #FF79DA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
   100% {
     opacity: 1;
     background-image: linear-gradient(to top right, #9356DC, #FF79DA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+}
+@keyframes appearsitem {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 .header {
@@ -83,6 +73,11 @@ section {
   background-color: #0f0f0fdc;
   color: white;
   display: block;
+}
+.footer .content {
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
 }
 .footer .container {
   display: flex;
@@ -102,6 +97,9 @@ section {
 }
 .footer__list--link {
   color: white;
+}
+.footer__list--link--icon {
+  padding-right: 0.5rem;
 }
 
 .loading {
@@ -193,8 +191,25 @@ section {
   padding: 1.2rem;
   background-color: white;
 }
+.functioning .content {
+  max-width: 1500px;
+  margin: auto;
+  position: relative;
+}
 .functioning__bloc {
   padding: 1rem 0 1rem 1rem;
+}
+@media (min-width: 1100px) {
+  .functioning__bloc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .functioning__bloc .functioning__bloc--step {
+    width: 20%;
+    white-space: nowrap;
+  }
 }
 .functioning__bloc--step {
   padding: 1.5rem;
@@ -231,11 +246,21 @@ section {
   background-color: whitesmoke;
   padding: 1.2rem;
 }
+.restaurant .content {
+  max-width: 1500px;
+  margin: auto;
+  position: relative;
+}
 .restaurant__bloc {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   column-gap: 2rem;
   row-gap: 2rem;
+}
+@media (min-width: 700px) {
+  .restaurant__bloc {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .restaurant__bloc .card {
   background-color: white;
@@ -273,7 +298,7 @@ section {
   justify-content: center;
   position: absolute;
   right: 20px;
-  top: 1;
+  top: 200px;
 }
 .restaurant__bloc .card__foot--like .noBG {
   left: -0.4px;
@@ -308,8 +333,15 @@ section {
 
 .imgtop {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 30rem;
+  width: 100%;
   object-fit: cover;
+}
+
+.content {
+  max-width: 1500px;
+  margin: auto;
+  position: relative;
 }
 
 .menu {
@@ -331,7 +363,7 @@ section {
   justify-content: center;
   position: absolute;
   right: 40px;
-  top: 1;
+  top: 25px;
 }
 .menu__head--like .noBG {
   left: -0.4px;
@@ -348,6 +380,146 @@ section {
 }
 .menu__head--like .BG:hover {
   animation: like__BG 0.5s forwards;
+}
+.menu .allsubmenu {
+  padding: 0rem 1rem;
+}
+.menu .allsubmenu .submenu__title {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-weight: normal;
+  font-size: 1.1em;
+}
+.menu .allsubmenu .submenu__title::after {
+  content: "";
+  width: 2.8rem;
+  height: 0.25rem;
+  background-color: #99E2D0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+.menu .allsubmenu .submenu .appears-1 {
+  animation: appearsitem 1s;
+}
+.menu .allsubmenu .submenu .appears-2 {
+  animation: appearsitem 1.5s;
+}
+.menu .allsubmenu .submenu .appears-3 {
+  animation: appearsitem 2s;
+}
+.menu .allsubmenu .submenu .appears-4 {
+  animation: appearsitem 2.5s;
+}
+.menu .allsubmenu .submenu .appears-5 {
+  animation: appearsitem 3s;
+}
+.menu .allsubmenu .submenu .appears-6 {
+  animation: appearsitem 3.5s;
+}
+.menu .allsubmenu .submenu .appears-7 {
+  animation: appearsitem 4s;
+}
+.menu .allsubmenu .submenu .appears-8 {
+  animation: appearsitem 4.5s;
+}
+.menu .allsubmenu .submenu .appears-9 {
+  animation: appearsitem 5s;
+}
+.menu .allsubmenu .submenu .appears-10 {
+  animation: appearsitem 5.5s;
+}
+.menu .allsubmenu .submenu__item {
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0rem 0.25rem 1rem rgba(0, 0, 0, 0.226);
+  cursor: pointer;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+.menu .allsubmenu .submenu__iteminfo {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu .allsubmenu .submenu__iteminfo--title {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 0.4rem;
+}
+.menu .allsubmenu .submenu__iteminfo--accompaniement {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+  min-width: 0;
+}
+.menu .allsubmenu .submenu__item--price {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-weight: bold;
+}
+.menu .allsubmenu .submenu__item--valid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  width: 4rem;
+  margin: -1rem -5rem -1rem 1rem;
+  transition-duration: 0.5s;
+}
+.menu .allsubmenu .submenu__item--valid--wrapicon {
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transform: rotate(200deg);
+  transition-duration: 0.5s;
+}
+.menu .allsubmenu .submenu__item--valid--icon {
+  color: white;
+}
+.menu .allsubmenu .submenu__item:hover .submenu__item--valid--wrapicon {
+  transform: rotate(0);
+}
+.menu .allsubmenu .submenu__item:hover .submenu__item--valid {
+  margin-right: -1rem;
+}
+@media (min-width: 1150px) {
+  .menu .allsubmenu {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 1rem;
+  }
+}
+.menu .commandbtnwrap {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+  text-decoration: none;
+}
+.menu .commandbtnwrap .commandbtn {
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  border-radius: 100px;
+  color: white;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  padding: 0.8rem 3rem;
+}
+.menu .commandbtnwrap .commandbtn:hover {
+  filter: brightness(1.15);
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=styles.css.map */

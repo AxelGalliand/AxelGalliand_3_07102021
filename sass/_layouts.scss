@@ -15,6 +15,12 @@
   background-color: #0f0f0fdc;
   color: white;
   display: block;
+
+  .content {
+    max-width: 1280px;
+    margin: auto;
+    position: relative;
+   }
   
   .container{
     display: flex;
@@ -27,6 +33,7 @@
     margin: 0;
     padding-bottom: 1rem;
     
+    
    }
    &__list {
     padding: 0;
@@ -36,6 +43,10 @@
     }
     &--link {
     color: white;
+
+      &--icon {
+      padding-right: 0.5rem;
+      }
    
      }
     }
