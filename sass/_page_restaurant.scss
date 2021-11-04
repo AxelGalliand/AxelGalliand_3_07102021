@@ -94,36 +94,13 @@ margin-top: -4rem;
       }
     }
      
-    .appears-1 {
-      animation: appearsitem 1s;
-    }
-    .appears-2 {
-      animation: appearsitem 1.5s;
-    }
-    .appears-3 {
-      animation: appearsitem 2s;
-    }
-    .appears-4 {
-      animation: appearsitem 2.5s;
-    }
-    .appears-5 {
-      animation: appearsitem 3s;
-    }
-    .appears-6 {
-      animation: appearsitem 3.5s;
-    }
-    .appears-7 {
-      animation: appearsitem 4s;
-    }
-    .appears-8 {
-      animation: appearsitem 4.5s;
-    }
-    .appears-9 {
-      animation: appearsitem 5s;
-    }
-    .appears-10 {
-      animation: appearsitem 5.5s;
-    }
+  
+
+    @for $i from 1 through 10 {
+        .appears-#{$i} {
+          animation: appearsitem $appears-delay * $i;
+        }
+      }
 
     &__item {
       background-color: white;
@@ -136,14 +113,8 @@ margin-top: -4rem;
       max-width: 100%;
       min-width: 0;
       overflow: hidden;
-      // animation: appearsitem 5.5s;
-      // @for $i from 1 through 10 {
-      //   .appears-#{$i} {
-      //     animation-delay: $appears-delay * $i;
-      //   }
-      // }
-      
-      
+      animation: appearsitem 5.5s;
+         
 
       &info {
         flex: 1;

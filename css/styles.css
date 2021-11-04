@@ -401,34 +401,34 @@ section {
   position: absolute;
 }
 .menu .allsubmenu .submenu .appears-1 {
-  animation: appearsitem 1s;
+  animation: appearsitem 0.5s;
 }
 .menu .allsubmenu .submenu .appears-2 {
-  animation: appearsitem 1.5s;
+  animation: appearsitem 1s;
 }
 .menu .allsubmenu .submenu .appears-3 {
-  animation: appearsitem 2s;
+  animation: appearsitem 1.5s;
 }
 .menu .allsubmenu .submenu .appears-4 {
-  animation: appearsitem 2.5s;
+  animation: appearsitem 2s;
 }
 .menu .allsubmenu .submenu .appears-5 {
-  animation: appearsitem 3s;
+  animation: appearsitem 2.5s;
 }
 .menu .allsubmenu .submenu .appears-6 {
-  animation: appearsitem 3.5s;
+  animation: appearsitem 3s;
 }
 .menu .allsubmenu .submenu .appears-7 {
-  animation: appearsitem 4s;
+  animation: appearsitem 3.5s;
 }
 .menu .allsubmenu .submenu .appears-8 {
-  animation: appearsitem 4.5s;
+  animation: appearsitem 4s;
 }
 .menu .allsubmenu .submenu .appears-9 {
-  animation: appearsitem 5s;
+  animation: appearsitem 4.5s;
 }
 .menu .allsubmenu .submenu .appears-10 {
-  animation: appearsitem 5.5s;
+  animation: appearsitem 5s;
 }
 .menu .allsubmenu .submenu__item {
   background-color: white;
@@ -441,6 +441,7 @@ section {
   max-width: 100%;
   min-width: 0;
   overflow: hidden;
+  animation: appearsitem 5.5s;
 }
 .menu .allsubmenu .submenu__iteminfo {
   flex: 1;
